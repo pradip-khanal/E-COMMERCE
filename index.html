@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Search Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="foot.css">
+    <style>
+
+
+
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar .search-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin: 0 20px;
+        }
+
+        .navbar .search-container input[type="text"] {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .navbar-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-icons button {
+            background: none;
+            border: none;
+            color: white;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            padding: 5px;
+            transition: color 0.3s;
+        }
+
+        .navbar-icons button:hover {
+            color:white;
+        }
+
+        .secondary-navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(241, 241, 241);
+            padding: 10px 0;
+           
+        }
+
+        .secondary-navbar a {
+            color: rgba(0, 0, 0, 0.842);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .secondary-navbar a:hover {
+            background-color: rgb(251, 254, 255);
+            
+        }
+        .secondary-navbar .dropdown {
+            position: relative;
+        }
+
+        .secondary-navbar .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            min-width: 150px;
+            border-radius: 6px;
+        }
+
+        .secondary-navbar .dropdown-menu a {
+            color: rgb(26, 23, 23);
+            padding: 8px 10px;
+            display:block;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .secondary-navbar .dropdown-menu a:hover {
+            background-color: #f2f2f2;
+            align-items:center ;
+            color:orange;
+        }
+
+        .secondary-navbar .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+
+
+
+
+
+
+        /* General Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+  }
+  
+  /* Newsletter Form */
+  .footer-section.newsletter form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-section.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .footer-section.newsletter button {
+    padding: 10px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .footer-section.newsletter button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+  }
+  
+  /* Social Media Links */
+  .footer-section.social-media .social-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-section.social-media .social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section.social-media .social-links a:hover {
+    color: #ff9800;
+  }
+  
+  /* Divider and Footer Bottom */
+  .footer-divider {
+    border: 1px solid #555;
+    margin: 20px 0;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+        
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">Logo</div>
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="navbar-icons">
+        <button title="Add to Cart"><i class="fa-solid fa-user"></i></button>
+        <button title="Account"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button title="Login"><i class="fa-regular fa-star"></i></button>
+    </div>
+</div>
+
+<div class="secondary-navbar">
+    <div class="secondary-navbar">
+        <a href="#">Home</a>
+        <a href="#">Product</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+      
+      <!-- About Section -->
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>Your one-stop shop for the best products at unbeatable prices. We strive to offer exceptional value and service to our customers.</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/product">product</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/terms">Terms & Conditions</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><strong>Email:</strong> pradipkhanal2079@gmail.com</p>
+        <p><strong>Phone:</strong> 98........</p>
+        <p><strong>Address:</strong> .......Street, Butwal, Nepal</p>
+      </div>
+  
+      <!-- Newsletter -->
+      <div class="footer-section newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="footer-section social-media">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/pradipkhanal" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/pradip07khanal" target="_blank">Instagram</a>
+          <a href="#" target="_blank">Twitter</a>
+          <a href="#" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  
+    <hr class="footer-divider">
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 ..... All Rights Reserved. | Designed by Pradip Khanal</p>
+    </div>
+  </footer>
+
+
+
+
+</body>
+</html>
